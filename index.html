@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Function Exercises</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="main-area">
+
+        <h1>Bunch of JS Examples</h1>
+
+        <p>Make sure the console is open. Outputs will be there!</p>
+
+        <div class="section">
+            <h2>Simple button calling a function</h2>
+
+            <button onclick="simpleButtonClicked()">Click me!</button>
+        </div>
+
+        <div class="section">
+            <h2>Input calling a function when inputting things</h2>
+
+            <input onkeydown="inputKeyDown()">
+        </div>
+
+        <div class="section">
+            <h2>Input calling a function when inputting things</h2>
+            <p>And using parameters to communicate what was pressed</p>
+
+            <input onkeydown="inputKeyDownWithParameter(event)">
+        </div>
+
+        <div class="section">
+            <h2>Button that prints contents from the site when pressed</h2>
+
+            <input id="input-to-be-read">
+            <button onclick="inputReadingButtonClicked()">Read me that input!</button>
+        </div>
+
+        <div class="section">
+            <h2>Lil' calculator</h2>
+
+            <div id="calculator-inputs">
+                <input id="calculator-first-input">
+                <select id="calculator-operator-select">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+                <input id="calculator-second-input">
+            </div>
+
+            <button onclick="calculatorButtonClicked()">Calculate!</button>
+        </div>
+
+    </div>
+    
+
+    <script src="./index.js"></script>
+</body>
+</html>
