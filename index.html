@@ -43,7 +43,7 @@
         <div class="section">
             <h2>Lil' calculator</h2>
 
-            <div id="calculator-inputs">
+            <div class="subsection">
                 <input id="calculator-first-input">
                 <select id="calculator-operator-select">
                     <option value="+">+</option>
@@ -55,6 +55,19 @@
             </div>
 
             <button onclick="calculatorButtonClicked()">Calculate!</button>
+        </div>
+
+        <div class="section">
+            <h2>Generated list (Complicated)</h2>
+
+            <div class="subsection">
+                <input id="list-input">
+                <button onclick="listAddButtonClicked()">Add</button>
+            </div>
+            
+            <ul id="list">
+                
+            </ul>
         </div>
 
     </div>

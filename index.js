@@ -47,3 +47,39 @@ function calculatorButtonClicked() {
 
     console.log(result);
 }
+
+// STUFF FOR THE GENERATED LIST
+
+const listInput = document.getElementById("list-input");
+const list = document.getElementById("list");
+
+const listEntries = [];
+
+function listAddButtonClicked() {
+    const inputValue = listInput.value;
+
+    if (inputValue == "") {
+        return;
+    }
+
+    listEntries.push(inputValue);
+    listInput.value = "";
+
+    addEntryToList(inputValue);
+}
+
+function addEntryToList(entryText) {
+    const listEntry = document.createElement("li");
+    const listEntryText = document.createTextNode(entryText);
+    listEntry.appendChild(listEntryText);
+
+    const listEntryDeleteButton = document.createElement("button");
+    const listEntryDeleteButtonText = document.createTextNode("X");
+    listEntryDeleteButton.appendChild(listEntryDeleteButtonText);
+    listEntryDeleteButton.addEventListener("click", () => {
+        list.removeChild(listEntry);
+    });
+    listEntry.appendChild(listEntryDeleteButton);
+
+    list.appendChild(listEntry);
+}
